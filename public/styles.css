@@ -54,3 +54,6 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+.note:hover {
+  background: rgb(190, 190, 190);
+}
