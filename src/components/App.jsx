@@ -7,6 +7,7 @@ function App() {
         <div>
             <Heading />
             <Note />
+            <Note />
             <Footer />
         </div>
         
