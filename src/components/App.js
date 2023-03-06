@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import notes from '../notes.js';
+import Form from "./Form";
 
 function createCard(props){
   return (<Note 
@@ -16,6 +17,7 @@ function App() {
     <div>
       <Header />
     {notes.map(createCard)}
+    <Form />
       <Footer />
     </div>
   );
