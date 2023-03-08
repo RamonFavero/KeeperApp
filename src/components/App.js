@@ -5,6 +5,7 @@ import Note from "./Note";
 import notes from '../notes.js';
 import Form from "./Form";
 
+
 function createCard(props){
   return (<Note 
   title={props.title}
@@ -12,13 +13,17 @@ function createCard(props){
   />
 )
 }
+
+
+
 function App() {
   return (
     <div>
       <Header />
     {notes.map(createCard)}
-    <Form />
+    <Form  />
       <Footer />
+      
     </div>
   );
 }

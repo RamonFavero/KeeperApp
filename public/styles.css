@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+.botao{
+  width: 20px;
+  height: 20px;
+}
 html {
   font-family: "Montserrat", sans-serif;
 }
@@ -53,4 +57,90 @@ footer p {
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+
+/*///////// FORM /////////////*/
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  gap: 10px;
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 25px;
+  transition: .2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+}
+
+.form:hover {
+  transform: translateX(-0.1em) translateY(-0.1em);
+  border: 1px solid #171717;
+  box-shadow: 5px 5px 0px #666666;
+}
+
+.heading {
+  color: black;
+  padding-bottom: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input {
+  margin-bottom: 19px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  outline: none;
+  padding: 0.7em;
+  transition: .1s ease-in-out;
+}
+.inputNote {
+  width: 190px;
+  height: 80px;
+  resize: none;
+  word-break: break-word;
+  margin-bottom: 19px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  outline: none;
+  padding: 0.7em;
+  transition: .1s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: 3px 3px 0px #969696,
+             -3px -3px 5px #ffffff;
+}
+
+.input:focus {
+  background: #ffffff;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+}
+
+.form .btn {
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  transition: .1s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.form .btn:hover {
+  box-shadow: 5px 5px 0px #969696,
+             -1px -1px 3px #ffffff;
+  transform: translateX(-0.2em) translateY(-0.2em);
+}
+
+.form .btn:active {
+  transition: .1s;
+  transform: translateX(0em) translateY(0em);
+  box-shadow: none;
 }
