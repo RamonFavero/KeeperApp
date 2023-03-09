@@ -12,13 +12,10 @@ function getHour() {
     const d = new Date();
    let horas = d.getHours();
    let minutos = d.getMinutes();
-   let segundos = d.getSeconds();
    if (horas<="9") {
     horas= "0"+horas;
    }if (minutos<="9") {
     minutos= "0"+minutos;
-   }if (segundos<="9") {
-    segundos= "0"+segundos;
    }
    return horas+":"+minutos;
   }
@@ -31,10 +28,19 @@ function TitleNote(props) {
 
     useEffect(()=>{
         const interval = setInterval(()=>{
-          console.log(ref.current);
-          ref.current.style.background='red';
-          ref.current.style.background='yellow';
-        },10000)
+        
+          let cardTime = ref.current.children[1].innerHTML;
+          let hourOfDay = getHour();
+  
+          if (cardTime.slice(0,2)<hourOfDay.slice(0,2)+1) {
+            ref.current.style.background='#DF2E38';
+          } if (cardTime.slice(0,2)>=hourOfDay.slice(0,2)+1) {
+            ref.current.style.background='#5D9C59';
+          }
+          
+          
+         
+        },5000)
         return () => clearInterval(interval);
       })
 

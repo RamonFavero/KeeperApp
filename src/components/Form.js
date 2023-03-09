@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Note from "./Note";
 
 var newValueTitle
@@ -11,7 +11,6 @@ function createCard(props){
     key={props.key}
   title={props.title}
   expirehour={props.expirehour}
-  
   content={props.content}
   />
 )
@@ -20,10 +19,6 @@ function createCard(props){
 
 // update hour of the day each 10s
 function Form() {
-
-
-
-
 
 
 const [form,setForm] = useState([])
@@ -42,7 +37,7 @@ function getTitle(e) {
 
 // submit using HTML Button
 function submitcard(e) {
-  console.log(items);
+  
   e.preventDefault()
   key++
     setItems(prevItems=>{
@@ -53,20 +48,10 @@ setForm({title:"",content:"",expirehour:""});
  newValueContent = ""
  newValueHour= ""
 }
-// submit using Enter Key
-function submitcardFromEnterkey() {
-  key++
-    setItems(prevItems=>{
-      return [...prevItems, form];
-    });
-setForm({title:"",content:"",expirehour:""});
- newValueTitle = ""
- newValueContent = ""
- newValueHour= ""
-}
+
 
 let loop = items.sort((a,b) => {
-  return a.expirehour<b.expirehour?1:-1;
+  return a.expirehour<b.expirehour?-1:1;
   })
 
 
@@ -78,8 +63,7 @@ let loop = items.sort((a,b) => {
     <p className="heading">New Note</p>
       <form onSubmit={submitcard}>
        <input className="input" placeholder="Title" name="title" value={form.title}  onChange={getTitle} ></input>
-      
-       <textarea onKeyDown={e=>{if (e.nativeEvent.key ==="Enter"&&!e.shiftKey){e.preventDefault();submitcardFromEnterkey(e.target.form)};}} className="input inputNote" placeholder="Note" name="content" value={form.content} onChange={getTitle}></textarea>
+       <textarea  className="input inputNote" placeholder="Note" name="content" value={form.content} onChange={getTitle}></textarea>
        <input className="input" type="time" value={form.expirehour} name="hour" onChange={getTitle}></input>
        <button className="btn"  type="submit">Submit</button>
        </form>
