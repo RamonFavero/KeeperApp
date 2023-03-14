@@ -8,7 +8,9 @@
   height: 20px;
 }
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  
 }
 body {
 
