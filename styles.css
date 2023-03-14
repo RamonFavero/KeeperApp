@@ -26,7 +26,7 @@ header {
   flex-direction: row-reverse;
   justify-content: space-between;
   background-color: #393053;
-  margin: auto -16px;
+  
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -56,7 +56,6 @@ footer p {
   color: #ccc;
 }
 .note {
-
   color: #e0e0e0;
 background: rgb(99,89,133);
 background: radial-gradient(circle, rgba(99,89,133,1) 0%, rgba(24,18,43,1) 100%);
@@ -67,6 +66,9 @@ background: radial-gradient(circle, rgba(99,89,133,1) 0%, rgba(24,18,43,1) 100%)
   min-height: 250px;
   margin: 16px;
   float: left;
+}
+.note p{
+  margin: 20px;
 }
 .notetitle{
   color: #000000;
